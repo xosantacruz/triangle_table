@@ -14,11 +14,21 @@ class Triangle{
     private:
         int szRow;
         RowAray **records;
+
     public:
-        Triangle(int);
-        ~Triangle();
+        Triangle(int) {
+            // Code...
+        }
+
+        ~Triangle() {
+            // Code...
+        }
+
         int getSzRow(){return szRow;}
-        int getData(int,int);
+
+        int getData(int , int) {
+            // Code...
+        }
 };
 
 
