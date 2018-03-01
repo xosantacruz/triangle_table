@@ -15,12 +15,22 @@ class Table{
         int szRow;
         int szCol;
         RowAray **records;
+
     public:
-        Table(int,int);
-        ~Table();
-        int getSzRow(){return szRow;}
-        int getSzCol(){return szCol;}
-        int getData(int,int);
+        Table(int numRows, int numCols) {
+            // Code...
+        }
+
+        ~Table() { 
+            // Code...
+        }
+
+        int getSzRow() { return szRow; }
+        int getSzCol() { return szCol; }
+
+        int getData(int,int) {
+            // Code..
+        }
 };
 
 #endif	/* TABLE_H */

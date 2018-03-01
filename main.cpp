@@ -19,47 +19,47 @@ using namespace std;
 
 //Function Prototype
 void prntRow(RowAray *,int);
-void prntTab(Table *);
-void prntTri(Triangle *);
+// void prntTab(Table *);
+// void prntTri(Triangle *);
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
    //Initialize the random seed
    srand(static_cast<unsigned int>(time(0)));
-   
+
    //Declare Variables
    int rows = 6;
    int cols = 8;
    int perLine = cols/2;
-   
+
    //Test out the RowAray
    RowAray row(cols);
-    
-   //Print the RowAray
-   cout << "The Row Array size = " << row.getSize()
-           << " printed " << perLine << " per Line";
 
-   prntRow(&row,perLine);
+   //Print the RowAray
+   cout << "The Row Array size = " << row.getSize() << " printed " << perLine << " per Line";
+
+   prntRow(&row, perLine);
    
    //Test out the Table
-   Table tab(rows,cols);
+   Table tab(rows, cols);
    
-   //Print the Table
-   cout << "The table size is [row,col] = [" << rows << "," << cols << "]";
-   prntTab(&tab);
+   // //Print the Table
+   // cout << "The table size is [row,col] = [" << rows << "," << cols << "]";
+   // prntTab(&tab);
    
-   //Test out the Triangular Table
-   Triangle tri(rows);
+   // //Test out the Triangular Table
+   // Triangle tri(rows);
    
-   //Print the Triangular Table
-   cout << "The triangular table size is [row,row] = [" << rows << "," << rows << "]";
-   prntTri(&tri);
+   // //Print the Triangular Table
+   // cout << "The triangular table size is [row,row] = [" << rows << "," << rows << "]";
+   // prntTri(&tri);
 
    //Exit Stage Right
+   cout << "Exiting program.";
    return 0;
 }
 
-void prntRow(RowAray *a,int perLine){
+void prntRow(RowAray *a, int perLine){
     cout << endl;
     for(int i=0; i<a->getSize(); i++){
         cout<< a->getData(i)<< " ";
@@ -68,24 +68,24 @@ void prntRow(RowAray *a,int perLine){
     cout << endl;
 }
 
-void prntTab(Table *a){
-    cout << endl;
-    for(int row=0; row<a->getSzRow(); row++){
-        for(int col=0; col<a->getSzCol(); col++){
-            cout << a->getData(row,col) << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-}
+// void prntTab(Table *a){
+//     cout << endl;
+//     for(int row=0; row<a->getSzRow(); row++){
+//         for(int col=0; col<a->getSzCol(); col++){
+//             cout << a->getData(row,col) << " ";
+//         }
+//         cout << endl;
+//     }
+//     cout << endl;
+// }
 
-void prntTri(Triangle *a){
-    cout << endl;
-    for(int row=0; row<a->getSzRow(); row++){
-        for(int col=0; col<=row; col++){
-            cout << a->getData(row,col) << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-}
+// void prntTri(Triangle *a){
+//     cout << endl;
+//     for(int row=0; row<a->getSzRow(); row++){
+//         for(int col=0; col<=row; col++){
+//             cout << a->getData(row,col) << " ";
+//         }
+//         cout << endl;
+//     }
+//     cout << endl;
+// }
