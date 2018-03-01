@@ -21,15 +21,15 @@ class Table{
             szRow = numRows; // 6
             szCol = numCols; // 8
 
-            // Create the rowAray rows
+            // Create the rowAray pointers
             records = new RowAray *[numRows];
 
+            // Create the rows x cols array
             for (int i = 0; i < numCols; ++i) {
                 records[i] = new RowAray(numCols);
             }
         }
 
-        // Destructor
         ~Table() { 
             for (int i = 0; i < szRow; ++i) {
                 delete records[i];
