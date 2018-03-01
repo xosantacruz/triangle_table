@@ -16,18 +16,30 @@ class Triangle{
         RowAray **records;
 
     public:
-        Triangle(int) {
-            // Code...
+        Triangle(int numRows) {
+            szRow = numRows;
+
+            // Create the rowAray pointers
+            records = new RowAray *[numRows];
+
+            // Create rowAray arrays of size
+            for (int i = 0; i < numRows; ++i) {
+                records[i] = new RowAray(numRows);
+            }
         }
 
         ~Triangle() {
-            // Code...
+            for (int i = 0; i < szRow; ++i) {
+                delete records[i];
+            }
+
+            delete [] records;
         }
 
         int getSzRow(){return szRow;}
 
-        int getData(int , int) {
-            // Code...
+        int getData(int row, int col) {
+            return records[row]->getData(col);
         }
 };
 
