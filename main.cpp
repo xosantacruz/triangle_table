@@ -19,7 +19,7 @@ using namespace std;
 
 //Function Prototype
 void prntRow(RowAray *,int);
-// void prntTab(Table *);
+void prntTab(Table *);
 // void prntTri(Triangle *);
 
 //Execution Begins Here!
@@ -39,17 +39,17 @@ int main(int argc, char** argv) {
    cout << "The Row Array size = " << row.getSize() << " printed " << perLine << " per Line";
 
    prntRow(&row, perLine);
-   
+
    //Test out the Table
    Table tab(rows, cols);
-   
-   // //Print the Table
-   // cout << "The table size is [row,col] = [" << rows << "," << cols << "]";
-   // prntTab(&tab);
-   
+
+   //Print the Table
+   cout << "The table size is [row,col] = [" << rows << "," << cols << "]";
+   prntTab(&tab);
+
    // //Test out the Triangular Table
    // Triangle tri(rows);
-   
+
    // //Print the Triangular Table
    // cout << "The triangular table size is [row,row] = [" << rows << "," << rows << "]";
    // prntTri(&tri);
@@ -68,16 +68,18 @@ void prntRow(RowAray *a, int perLine){
     cout << endl;
 }
 
-// void prntTab(Table *a){
-//     cout << endl;
-//     for(int row=0; row<a->getSzRow(); row++){
-//         for(int col=0; col<a->getSzCol(); col++){
-//             cout << a->getData(row,col) << " ";
-//         }
-//         cout << endl;
-//     }
-//     cout << endl;
-// }
+void prntTab(Table *a){
+    cout << endl;
+    for(int row = 0; row < a->getSzRow(); row++){
+        for(int col = 0; col < a->getSzCol(); col++){
+            cout << a->getData(row, col) << " ";
+        }
+
+        cout << endl;
+    }
+
+    cout << endl;
+}
 
 // void prntTri(Triangle *a){
 //     cout << endl;

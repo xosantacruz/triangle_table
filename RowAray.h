@@ -27,7 +27,7 @@ class RowAray{
         }
 
         // Destructor
-        ~RowAray() { delete rowData; }
+        ~RowAray() { delete [] rowData; }
         int getSize() { return size; }
         int getData(int i) { return rowData[i]; }
 };

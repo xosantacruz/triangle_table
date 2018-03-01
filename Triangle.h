@@ -28,6 +28,8 @@ class Triangle{
 
         int getData(int , int) {
             // Code...
+
+            return 0;
         }
 };
 

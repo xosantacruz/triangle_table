@@ -18,18 +18,31 @@ class Table{
 
     public:
         Table(int numRows, int numCols) {
-            // Code...
+            szRow = numRows; // 6
+            szCol = numCols; // 8
+
+            // Create the rowAray rows
+            records = new RowAray *[numRows];
+
+            for (int i = 0; i < numCols; ++i) {
+                records[i] = new RowAray(numCols);
+            }
         }
 
+        // Destructor
         ~Table() { 
-            // Code...
+            for (int i = 0; i < szRow; ++i) {
+                delete records[i];
+            }
+
+            delete [] records;
         }
 
         int getSzRow() { return szRow; }
         int getSzCol() { return szCol; }
 
-        int getData(int,int) {
-            // Code..
+        int getData(int row, int col) {
+            return records[row]->getData(col);
         }
 };
 
